@@ -15,6 +15,7 @@ import axios from 'axios';
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
     yield takeEvery('GET_DESCRIPTION', getDescription);
+    yield takeEvery('GET_GENRES', getGenres);
 }
 
 function* fetchAllMovies() {
@@ -33,7 +34,16 @@ function* fetchAllMovies() {
 function* getDescription(action){
     try{
         let description = yield axios.get(`/api/description/${action.payload}`)
-        yield put({type: 'SET_DESCRIPTION', payload: description.data})
+        yield put({type: 'SET_DESCRIPTION', payload: description.data});
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+function* getGenres(action){
+    try {
+        let genres = yield axios.get(`/api/genre/${action.payload}`)
+        yield put({type: 'SET_GENRES', payload: genres.data})
     } catch (err) {
         console.log(err);
     }

@@ -21,6 +21,11 @@ function MovieList() {
             payload: id
         })
 
+        dispatch({
+            type: 'GET_GENRES',
+            payload: id
+        })
+
         console.log('clicked movie', id);
         history.push(`/api/description/${id}`);
     }

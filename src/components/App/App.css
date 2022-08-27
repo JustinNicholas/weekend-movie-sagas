@@ -6,14 +6,15 @@
   background-image: url('../../../public/images/MovieBackgroundImage.png');
   object-fit: scale-down;
   width: auto;
+  height: 1024px;
   background-size: contain;
   background-repeat: no-repeat;
   /* background-size: cover; */
 }
 
-/* body{
-
-} */
+body{
+  background-color: black;
+}
 
 .neon-button {
   background-color: rgba(0, 0, 0, 0);

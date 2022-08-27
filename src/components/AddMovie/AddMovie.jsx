@@ -3,6 +3,7 @@ import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function AddMovie() {
 
@@ -23,6 +24,11 @@ function AddMovie() {
     ];
 
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    const returnHome = () => {
+        history.push('/');
+    }
 
     const animatedComponents = makeAnimated();
 
@@ -81,7 +87,8 @@ function AddMovie() {
                 isMulti
                 options={options}
                 />
-                <button type='submit'>Submit</button>
+                <button type='submit'>Save</button>
+                <button onClick={returnHome}>Cancel</button>
             </form>
         </>
     )

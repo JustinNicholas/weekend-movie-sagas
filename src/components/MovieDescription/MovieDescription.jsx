@@ -1,7 +1,32 @@
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+// import { useParams } from "react-router-dom";
 
 function MovieDescription() {
+
+    // On page load we call the dispatch to get the description. by calling refresh and using the id from the useParams as the argument.
+    let {id} = useParams();
+    useEffect( () => {
+        refresh(id);
+    }, [])
+    const dispatch = useDispatch();
+
+    // refresh function calls
+    const refresh = (id) => {
+
+        dispatch({
+            type: 'GET_DESCRIPTION',
+            payload: id
+        })
+
+        dispatch({
+            type: 'GET_GENRES',
+            payload: id
+        })
+    }
 
     const history = useHistory();
 
@@ -11,8 +36,6 @@ function MovieDescription() {
 
     const description = useSelector(store => store.description)
     const genres = useSelector(store => store.genres)
-
-    // console.log('description:',description);
 
     return(
         <>

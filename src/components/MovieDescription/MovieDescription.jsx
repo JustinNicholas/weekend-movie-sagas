@@ -42,7 +42,7 @@ function MovieDescription() {
         {description.map( movie => {
             console.log('title:',movie.title);
             return (
-            <div key={movie.id}>
+            <div key={movie.id} className='movie-card'>
                 <div>
                     <h1>Description Page</h1>
                     <img src={movie.poster} />

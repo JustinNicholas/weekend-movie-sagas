@@ -2,12 +2,73 @@
   text-align: center;
 }
 
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  background-image: url('../../../public/images/MovieBackgroundImage.png');
+  /* object-fit: scale-down; */
+  /* width: 100%; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.neon-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #00F0FF;
+  border-radius: 5px;
+  color: #00F0FF;
+  text-shadow: 0px 0px 20px #00eeffd4;
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 12px;
+  margin-left: 12px;
+  /* margin-right: 15px; */
+}
+
+.neon-button-text {
+  color: #00F0FF;
+  font-weight: 700;
+  text-decoration: none;
+  pointer-events: all;
+}
+
+.nav-buttons {
+  margin-bottom: 25px;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+}
+
+.header-container {
+  height: 90px;
+}
+
+.customLogo {
+  background-image: url('../../../public/images/JustinCustomLogo.svg');
+  height: 25px;
+  width: 255px;
+  margin-left: 0;
+  margin-top: 0;
+  position: absolute;
+  left: 30px;
+  top: 32px
+}
+
+.app-header {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-size: 48px;
+  /* padding: 20px; */
+  color: #00F0FF;
+  text-shadow: 0px 0px 20px #00eeffd4;
+}
+
+.outline-text {
+  color: rgba(0, 0, 0, 0.50);
+  -webkit-text-stroke: 2px #00F0FF;
 }
 
 .App-title {

@@ -36,16 +36,22 @@ router.post('/', (req, res) => {
       INSERT INTO "movies_genres" ("movie_id", "genre_id")
       VALUES  ($1, $2);
       `
+      for( let i=0; i<req.body.genre_id.length;i++){
+        console.log(req.body.genre_id[i]);
+      
+
       // SECOND QUERY ADDS GENRE FOR THAT NEW MOVIE
-      pool.query(insertMovieGenreQuery, [createdMovieId, req.body.genre_id]).then(result => {
+      pool.query(insertMovieGenreQuery, [createdMovieId, req.body.genre_id[i]]).then(result => {
         //Now that both are done, send back success!
-        res.sendStatus(201);
+        // res.sendStatus(201);
       }).catch(err => {
         // catch for second query
         console.log(err);
         res.sendStatus(500)
       })
-
+      }
+      //moved this here because we cannot send multiple res.status in the same query.
+      res.sendStatus(201);
 // Catch for first query
   }).catch(err => {
     console.log(err);

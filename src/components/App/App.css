@@ -1,17 +1,19 @@
 .App {
   text-align: center;
-}
 
-body{
   font-family: 'Poppins', sans-serif;
   background-color: black;
   background-image: url('../../../public/images/MovieBackgroundImage.png');
-  /* object-fit: scale-down; */
-  /* width: 100%; */
+  object-fit: scale-down;
+  width: auto;
   background-size: contain;
   background-repeat: no-repeat;
   /* background-size: cover; */
 }
+
+/* body{
+
+} */
 
 .neon-button {
   background-color: rgba(0, 0, 0, 0);
@@ -57,13 +59,13 @@ body{
 }
 
 .app-header {
-  margin: 0;
+  margin-bottom: 50px;
   font-weight: 700;
   letter-spacing: 5px;
   font-size: 48px;
   /* padding: 20px; */
   color: #00F0FF;
-  text-shadow: 0px 0px 20px #00eeffd4;
+  /* text-shadow: 0px 0px 20px #00eeffd4; */
 }
 
 .outline-text {
@@ -79,7 +81,47 @@ body{
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+} */
+
+.neonText {
+  color: #00F0FF;
+  text-shadow:
+      0 0 7px #0884BC,
+      0 0 10px #0884BC,
+      0 0 21px #0884BC,
+      0 0 42px #0884BC,
+      0 0 82px #0884BC,
+      0 0 92px #0884BC,
+      0 0 102px #0884BC,
+      0 0 151px #0884BC;
+}
+
+h1 {
+  font-size: 4.2rem;
+  animation: flicker 1.5s infinite alternate;     
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #0884BC,
+      0 0 11px #0884BC,
+      0 0 19px #0884BC,
+      0 0 40px #0884BC,
+      0 0 80px #0884BC,
+      0 0 90px #0884BC,
+      0 0 100px #0884BC,
+      0 0 150px #0884BC;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
 }

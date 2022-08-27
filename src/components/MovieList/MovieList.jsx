@@ -31,7 +31,7 @@ function MovieList() {
     }
 
     return (
-        <main>
+        <main className='movie-container'>
             {/* <h1>MovieList</h1> */}
             <section className="movies">
                 {movies.map(movie => {

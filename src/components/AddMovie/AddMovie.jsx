@@ -4,6 +4,7 @@ import makeAnimated from 'react-select/animated';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import './AddMovie.css'
 
 function AddMovie() {
 
@@ -73,7 +74,7 @@ function AddMovie() {
 
     return(
         <>
-            <h1>Add Movie Form</h1>
+            {/* <h1>Add Movie Form</h1> */}
 
             <form onSubmit={(event) => handleSubmit(event)}>
                 <input onChange={titleChange} type="text" placeholder="Movie Title"/>

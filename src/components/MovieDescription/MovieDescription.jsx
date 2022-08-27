@@ -44,7 +44,7 @@ function MovieDescription() {
             return (
             <div key={movie.id} className='movie-card'>
                 <div>
-                    <h1>Description Page</h1>
+                    {/* <h1>Description Page</h1> */}
                     <img src={movie.poster} />
                     <h3>{movie.title}</h3>
                     <p>{movie.description}</p>

@@ -13,10 +13,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Navbar /> */}
- 
-      
-
       <Router>  
       <nav>
         <div className='header-container'>
@@ -33,7 +29,7 @@ function App() {
           </div>
         </div>
       </nav>
-      <h1 className='app-header'>THE <span className='outline-text'>MOVIES</span> SAGA</h1>
+      <h1 className='app-header neonText'>THE <span className='outline-text'>MOVIES</span> SAGA</h1>
         <Route path="/" exact>
           <MovieList />
         </Route>

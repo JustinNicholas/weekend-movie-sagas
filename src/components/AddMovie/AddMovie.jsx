@@ -51,14 +51,14 @@ function AddMovie() {
     }
 
     const genresChange = (event) => {
+        console.log('event!',event);
+        // We had to add a new array so that we could map through the changes and not enter them into the newGenre as a duplicate when deleting.
+        let newArray = []
         event.map(event => {
-            setNewGenre([...newGenre, event.value]);
+            newArray.push(event.value)         
         })
-        // console.log(newGenre);
-        // console.log(event.formTarget.value);
-        // setNewMovie({...newMovie, genres:[ ...genres, event.target.value]})
+        setNewGenre(newArray);
     }
-
 
     const handleSubmit = (event) => {
         event.preventDefault;
@@ -78,7 +78,7 @@ function AddMovie() {
             <form onSubmit={(event) => handleSubmit(event)}>
                 <input onChange={titleChange} type="text" placeholder="Movie Title"/>
                 <input onChange={posterChange} type="text" placeholder="Movie Poster Image Url"/>
-                <input onChange={descriptionChange} type="text" placeholder="Movie Description"/>
+                <textarea onChange={descriptionChange} type="text" placeholder="Movie Description"/>
 
                 <Select
                 onChange={genresChange}

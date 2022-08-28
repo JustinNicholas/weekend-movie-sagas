@@ -10,7 +10,7 @@ This project was a lot of fun and I was able to do some cool effects to make the
 
 If I had more time on this project I would have loved to add a video preview on hover of the movie cards on the description page. I did some research and attempted this but ran into an issue with CORS. 
 
-# Screen Shot: [GIF of completed site](public/images/SurveyGIF.gif)
+# Screen Shot: [GIF of completed site](public/images/movie-saga-gif.gif)
 
 ## Prerequisites and Installation:
 

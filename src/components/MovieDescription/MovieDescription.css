@@ -51,6 +51,10 @@
     top: 665px;
 }
 
+.cancel-button:hover{
+    box-shadow: 0 0 50px #0884BC;
+}
+
 .genre-heading {
     color: white;
     font-size: 25px;

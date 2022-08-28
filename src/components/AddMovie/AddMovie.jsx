@@ -64,10 +64,17 @@ function AddMovie() {
     const handleSubmit = (event) => {
         event.preventDefault;
 
+        if(newMovie.title === '' || newMovie.poster === '' || newMovie.description === '' || newGenre === []) {
+            alert('Please enter information in all categories');
+        } else {
+
         dispatch({
             type: 'ADD_MOVIE',
             payload: {title: newMovie.title, poster: newMovie.poster, description: newMovie.description, genre_id: newGenre}
         })
+
+        history.push('/');
+        }
     }
 
 

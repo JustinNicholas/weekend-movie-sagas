@@ -44,6 +44,10 @@
     border-radius: 5px;
 }
 
+.save-button:hover{
+    box-shadow: 0 0 50px #0884BC;
+}
+
 .cancel-button {
     background-color: black;
     color: #00F0FF;
@@ -52,6 +56,10 @@
     width: 100px;
     margin-right: 12px;
     border-radius: 5px;
+}
+
+.cancel-button:hover{
+    box-shadow: 0 0 50px #0884BC;
 }
 
 .selecter {

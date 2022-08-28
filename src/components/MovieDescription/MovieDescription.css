@@ -1,0 +1,50 @@
+.description-movie-card {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.description-movie-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 370px;
+    height: 550px;
+    object-fit: cover;
+}
+
+.description-text {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: left;
+    color: white;
+    width: 400px;
+}
+
+.description-genres {
+    position: absolute;
+    left: 0;
+    top: 575px;
+    color: black;
+    width: 370px;
+    text-align: left;
+}
+
+.genre-bubble {
+    background-color: #bfbfbf;
+    border-radius: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    font-weight: 400;
+    display: inline-block;
+    
+}
+
+.return-home-button {
+    position: absolute;
+    left: 0;
+    top: 630px;
+}

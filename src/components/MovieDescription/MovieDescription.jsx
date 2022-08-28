@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import './MovieDescription.css';
 // import { useParams } from "react-router-dom";
 
 function MovieDescription() {
@@ -42,23 +43,26 @@ function MovieDescription() {
         {description.map( movie => {
             console.log('title:',movie.title);
             return (
-            <div key={movie.id} className='movie-card'>
+            <div key={movie.id} className='description-movie-card'>
                 <div>
                     {/* <h1>Description Page</h1> */}
-                    <img src={movie.poster} />
-                    <h3>{movie.title}</h3>
-                    <p>{movie.description}</p>
+                    <img className='description-movie-img' src={movie.poster} />
+                    <div className='description-text'>
+                        <h3>{movie.title}</h3>
+                        <p>{movie.description}</p>
+                    </div>
                 </div>
-
+                <div className="description-genres">
                 {genres.map( (genre) => {
                         return(
-                            <div key={genre.id}>
-                                <p>{genre.name}</p>
+                            <div className="genre-bubble" key={genre.id}>
+                                <div>{genre.name}</div>
                             </div>
                         )
                     })}
-                <div>
-                    <button onClick={returnHome}>Home</button>
+                </div>
+                <div className="return-home-button">
+                    <button className="cancel-button" onClick={returnHome}>Home</button>
                 </div>
             </div>
             )

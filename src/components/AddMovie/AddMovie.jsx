@@ -73,25 +73,28 @@ function AddMovie() {
 
 
     return(
-        <>
-            {/* <h1>Add Movie Form</h1> */}
+        <div className='add-movie-container'>
+            <h2 className='form-header'>ADD A MOVIE</h2>
 
             <form onSubmit={(event) => handleSubmit(event)}>
-                <input onChange={titleChange} type="text" placeholder="Movie Title"/>
-                <input onChange={posterChange} type="text" placeholder="Movie Poster Image Url"/>
-                <textarea onChange={descriptionChange} type="text" placeholder="Movie Description"/>
+                <input className='movie-input' onChange={titleChange} type="text" placeholder="Movie Title"/>
+                <input className='movie-input' onChange={posterChange} type="text" placeholder="Movie Poster Image Url"/>
+                <textarea className='movie-text-area' onChange={descriptionChange} type="text" placeholder="Movie Description"/>
 
                 <Select
+                className='movie-input'
                 onChange={genresChange}
                 closeMenuOnSelect={false}
                 components={animatedComponents}
                 isMulti
                 options={options}
                 />
-                <button type='submit'>Save</button>
-                <button onClick={returnHome}>Cancel</button>
+                <div className='form-button-container'>
+                    <button className='cancel-button' onClick={returnHome}>Cancel</button>
+                    <button className='save-button' type='submit'>Save</button>
+                </div>
             </form>
-        </>
+        </div>
     )
 }
 

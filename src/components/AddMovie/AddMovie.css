@@ -1,2 +1,53 @@
+.add-movie-container {
+    width: 800px;
+    height: 520px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
 
-  
+.movie-input {
+    width: 400px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.movie-text-area {
+    width: 400px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.form-header {
+    color: #00F0FF;
+    padding-top: 25px;
+    margin-bottom: 25px;
+    letter-spacing: 5px;
+}
+
+.form-button-container {
+
+}
+
+.save-button {
+    background-color: #00F0FF;
+    height: 40px;
+    width: 100px;
+    margin-left: 12px;
+    border-radius: 5px;
+}
+
+.cancel-button {
+    background-color: black;
+    color: #00F0FF;
+    border: 1px solid #00F0FF;
+    height: 40px;
+    width: 100px;
+    margin-right: 12px;
+    border-radius: 5px;
+}

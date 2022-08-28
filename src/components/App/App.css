@@ -4,16 +4,28 @@
   font-family: 'Poppins', sans-serif;
   background-color: black;
   background-image: url('../../../public/images/MovieBackgroundImage.png');
-  object-fit: scale-down;
-  width: auto;
-  height: 1024px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  /* object-fit: cover; */
+
+  /* min-width: 100%;
+  height: auto; */
+  min-height: 1000px; 
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
   /* background-size: cover; */
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body{
   background-color: black;
+  /* background-image: url('../../../public/images/blackBrick.png');
+  object-fit: scale-down;
+  width: auto;
+  height: 100%;
+  min-height: 990px;
+  background-size: contain; */
 }
 
 .neon-button {
@@ -66,6 +78,7 @@ body{
   font-size: 48px;
   /* padding: 20px; */
   color: #00F0FF;
+  margin-bottom: 60px;
   /* text-shadow: 0px 0px 20px #00eeffd4; */
 }
 

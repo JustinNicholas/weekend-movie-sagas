@@ -12,8 +12,9 @@ function App() {
   // }
 
   return (
-    <div className="App">
+    <div>
       <Router>  
+        <div className="App">
       <nav>
         <div className='header-container'>
         <div className='customLogo'></div>
@@ -43,6 +44,7 @@ function App() {
         <Route path="/api/add">
           <AddMovie />
         </Route>
+        </div>
       </Router>
     </div>
   );

@@ -12,6 +12,8 @@
     width: 370px;
     height: 550px;
     object-fit: cover;
+    border: 1px solid #00F0FF;
+    border-radius: 5px;
 }
 
 .description-text {
@@ -26,25 +28,34 @@
 .description-genres {
     position: absolute;
     left: 0;
-    top: 575px;
+    top: 565px;
     color: black;
-    width: 370px;
     text-align: left;
 }
 
 .genre-bubble {
-    background-color: #bfbfbf;
+    background-color: #00eeff7b;
+    color: white;
     border-radius: 20px;
     padding-right: 10px;
     padding-left: 10px;
     margin-right: 10px;
     font-weight: 400;
     display: inline-block;
-    
+    margin-bottom: 10px;
 }
 
 .return-home-button {
     position: absolute;
     left: 0;
-    top: 630px;
+    top: 665px;
+}
+
+.genre-heading {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
 }

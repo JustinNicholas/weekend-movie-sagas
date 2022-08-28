@@ -82,7 +82,7 @@ function AddMovie() {
                 <textarea className='movie-text-area' onChange={descriptionChange} type="text" placeholder="Movie Description"/>
 
                 <Select
-                className='movie-input'
+                className='movie-input selecter'
                 onChange={genresChange}
                 closeMenuOnSelect={false}
                 components={animatedComponents}

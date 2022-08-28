@@ -1,10 +1,11 @@
 .add-movie-container {
     width: 800px;
-    height: 520px;
+    height: auto;
     background-color: black;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
+    border: 2px solid #00F0FF;
 }
 
 .movie-input {
@@ -31,7 +32,8 @@
 }
 
 .form-button-container {
-
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 .save-button {
@@ -50,4 +52,8 @@
     width: 100px;
     margin-right: 12px;
     border-radius: 5px;
+}
+
+.selecter {
+    padding-bottom: 20px;
 }

@@ -53,6 +53,7 @@ function MovieDescription() {
                     </div>
                 </div>
                 <div className="description-genres">
+                <p className="genre-heading">GENRES</p>
                 {genres.map( (genre) => {
                         return(
                             <div className="genre-bubble" key={genre.id}>

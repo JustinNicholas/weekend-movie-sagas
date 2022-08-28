@@ -6,14 +6,14 @@ import './MovieList.css'
 function MovieList() {
 
     const history = useHistory();
-
     const dispatch = useDispatch();
+    // we get info of the movies from the store
     const movies = useSelector(store => store.movies);
-
+    // we call the fetch movies function to get the movie info on page load
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
-    
+    // we call the movie description page and get the info we need when an image card is clicked and send the user to that page.
     const movieDescriptionPage = (id) => {
 
         dispatch({
@@ -32,7 +32,7 @@ function MovieList() {
 
     return (
         <main className='movie-container'>
-            {/* <h1>MovieList</h1> */}
+            {/* We map through the movies to display the movie poster and title on each card */}
             <section className="movies">
                 {movies.map(movie => {
                     return (

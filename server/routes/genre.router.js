@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
+
+// We get the genre names that are associated with a movie id from the DB
 router.get('/:id', (req, res) => {
   const queryText = `SELECT "genres".name, "genres".id FROM "movies"
   JOIN "movies_genres"
@@ -11,7 +13,7 @@ router.get('/:id', (req, res) => {
   WHERE "movies".id = $1;`
 
   const queryValues = [req.params.id]
-
+  // We send the result rows back to the store.
   pool.query(queryText, queryValues)
     .then( result => {
       res.send(result.rows)

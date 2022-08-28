@@ -6,31 +6,22 @@ import AddMovie from '../AddMovie/AddMovie.jsx';
 
 function App() {
 
-
-  // const homePage = () => {
-  //   history.pushState('/')
-  // }
-
   return (
     <div>
-      <Router>  
+      <Router>
+        {/* this is the header image, heading, and nav buttons that are rendered on all pages */}
         <div className="App">
       <nav>
         <div className='header-container'>
         <div className='customLogo'></div>
           <div className='nav-buttons'>
-          {/* <button className="neon-button" onClick={returnHome}>
-            Home
-          </button>
-          <button className="neon-button" onClick={addPage}>
-            Add Movie
-          </button> */}
             <button className='neon-button'><Link className='neon-button-text' to='/'>HOME</Link></button>
             <button className='neon-button'><Link className='neon-button-text' to='/api/add'>ADD MOVIE</Link></button>
           </div>
         </div>
       </nav>
       <h1 className='app-header neonText'>THE <span className='outline-text'>MOVIES</span> SAGA</h1>
+        {/* movie list is displayed on home page and is all the movie cards */}
         <Route path="/" exact>
           <MovieList />
         </Route>

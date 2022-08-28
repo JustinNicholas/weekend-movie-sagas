@@ -20,7 +20,7 @@ function* rootSaga() {
 }
 
 function* fetchAllMovies() {
-    // get all movies from the DB
+    // get all movies from the DB and set the reducer to the response
     try {
         const movies = yield axios.get('/api/movie');
         console.log('get all:', movies.data);
@@ -33,6 +33,7 @@ function* fetchAllMovies() {
 }
 
 function* getDescription(action){
+    // get the description of a specific moveie and set the description reducer to the response.
     try{
         let description = yield axios.get(`/api/description/${action.payload}`)
         yield put({type: 'SET_DESCRIPTION', payload: description.data});
@@ -42,6 +43,7 @@ function* getDescription(action){
 }
 
 function* getGenres(action){
+    // get the genres of a specific moveie and set the description reducer to the response.
     try {
         let genres = yield axios.get(`/api/genre/${action.payload}`)
         yield put({type: 'SET_GENRES', payload: genres.data})
@@ -51,6 +53,7 @@ function* getGenres(action){
 }
 
 function* addMovie(action) {
+    // add movie to the DB and then call the get movies to have an updated movie list.
     console.log(action.payload);
     try {
         yield axios.post(`/api/movie`, action.payload)
@@ -84,6 +87,7 @@ const genres = (state = [], action) => {
     }
 }
 
+// Used to store the description of a specific movie
 const description = (state = [], action ) => {
     switch (action.type) {
         case 'SET_DESCRIPTION':

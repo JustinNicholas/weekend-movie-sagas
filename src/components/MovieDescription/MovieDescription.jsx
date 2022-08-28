@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import './MovieDescription.css';
-// import { useParams } from "react-router-dom";
 
 function MovieDescription() {
 
@@ -15,7 +14,7 @@ function MovieDescription() {
     }, [])
     const dispatch = useDispatch();
 
-    // refresh function calls
+    // refresh function calls get desctiption and genres of the id from the url so info is kept on refresh.
     const refresh = (id) => {
 
         dispatch({
@@ -30,22 +29,22 @@ function MovieDescription() {
     }
 
     const history = useHistory();
-
+    // HOME button sends user back to the home page
     const returnHome = () => {
         history.push('/');
     }
-
+    // we pull info from the store of the movie description and movie genres reducers
     const description = useSelector(store => store.description)
     const genres = useSelector(store => store.genres)
 
     return(
         <>
+        {/* We map through the movie array we get to display the image, title, and description */}
         {description.map( movie => {
             console.log('title:',movie.title);
             return (
             <div key={movie.id} className='description-movie-card'>
                 <div>
-                    {/* <h1>Description Page</h1> */}
                     <img className='description-movie-img' src={movie.poster} />
                     <div className='description-text'>
                         <h3>{movie.title}</h3>
@@ -54,6 +53,7 @@ function MovieDescription() {
                 </div>
                 <div className="description-genres">
                 <p className="genre-heading">GENRES</p>
+                {/* We map through the genres array to display all of the genres for the movie we selected. */}
                 {genres.map( (genre) => {
                         return(
                             <div className="genre-bubble" key={genre.id}>
@@ -62,8 +62,9 @@ function MovieDescription() {
                         )
                     })}
                 </div>
+                {/* we have a home button on the bottom of the description section */}
                 <div className="return-home-button">
-                    <button className="cancel-button" onClick={returnHome}>Home</button>
+                    <button className="cancel-button" onClick={returnHome}>HOME</button>
                 </div>
             </div>
             )

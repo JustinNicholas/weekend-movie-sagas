@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
+// We get all of the movie info from the movie table in the DB and send back the info to the store
 router.get('/', (req, res) => {
 
   const query = `SELECT * FROM movies ORDER BY "title" ASC`;
@@ -27,8 +28,8 @@ router.post('/', (req, res) => {
   // FIRST QUERY MAKES MOVIE
   pool.query(insertMovieQuery, [req.body.title, req.body.poster, req.body.description])
   .then(result => {
-    console.log('New Movie Id:', result.rows[0].id); //ID IS HERE!
-    
+    // console.log('New Movie Id:', result.rows[0].id); //ID IS HERE!
+    // this is the id of the movie we added and we need this to add multiple genres
     const createdMovieId = result.rows[0].id
 
     // Now handle the genre reference
@@ -36,6 +37,7 @@ router.post('/', (req, res) => {
       INSERT INTO "movies_genres" ("movie_id", "genre_id")
       VALUES  ($1, $2);
       `
+      // we loop through the array of genres and add each genrea to the DB with the movie id from the movie we submitted.
       for( let i=0; i<req.body.genre_id.length;i++){
         console.log(req.body.genre_id[i]);
       
